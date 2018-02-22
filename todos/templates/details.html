@@ -1,0 +1,11 @@
+{% include 'partials/header.html' %}
+
+<h1>{{todo.title}}</h1>
+<p>{{todo.text}}</p>
+<br>
+<hr>
+<p>Created on {{todo.created_at}}</p>
+<br>
+<a href="/todos">Go back</a>
+
+{% include 'partials/footer.html' %}

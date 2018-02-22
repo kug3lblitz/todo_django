@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Django Todos</title>
+</head>
+<body>
+    
+    <header>
+        <h3>Hello {{user}}!</h3>
+        <br>
+        <h4>Here's what's on the docket today:</h4>
+    </header>
+    <hr>
+    <br>
+    <ul>
+        {% for todo in todos %}
+            <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+
